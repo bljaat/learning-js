@@ -13,7 +13,7 @@ for(let a = 1 ; a <= 10 ; a++){
     // console.log(result)
 }
 
-for(let i = 10; i >= 1 ; i-- ){      // reverce table in for loop 
+for(let i = 10; i >= 1 ; i-- ){      // reverce table in for loop   // decrement
     // console.log(i * 2)
 }
 

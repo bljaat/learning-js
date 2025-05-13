@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 278px;
+            border-radius: 5px;
+            border: 1px solid rgb(172 172 172);
+            background-color: rgb(172 172 172);
+            min-width: 366px;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body style="display: flex; align-items: center; justify-content: center;">
+    <div class="wrapper">
+        <ul>
+            <li class="red">red</li>
+            <li class="green">green</li>
+            <li class="blue">blue</li>
+        </ul>
+        <input type="text">
+    </div>
+
+    <script>
+        let list = document.querySelectorAll("li")
+        let wrapper = document.querySelector(".wrapper")
+        let input = document.querySelector("input")
+
+
+        list.forEach((li) => {
+
+            li.addEventListener("click", (e) => {
+                console.log(e.target.innerText)
+                wrapper.style.backgroundColor = e.target.innerText
+                console.log(input.value)
+            })
+        })
+    </script>
+</body>
+
+</html>
